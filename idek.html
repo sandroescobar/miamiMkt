@@ -1,2 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
 
+
+<head>
+    <title>Miami Mkt Bodega Home Page</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar_body">
+    <span class="navbar_logo"> Miami MKT</span>
+
+    <div class="navbar_redirects">
+        <span> Home</span>
+        <span>Explore</span>
+        <span>About</span>
+        <span>Support</span>
+    </div>
+
+</nav>
+
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+body{
+margin:0;
+}
+
+
+
+
+
+
+.navbar_body{
+    display: grid;
+  grid-template-columns: auto 1fr;   /* logo | links  (add another 'auto' later for icons) */
+  align-items: center;               /* vertical centering */
+  height: 3rem;
+  background: #000;
+  color: #fff;
+  padding: 0 12px;
+}
+
+
+.navbar_logo{
+    grid-column: 1;
+    font-weight: 600;
+}
+
+
+.navbar_redirects{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;           /* center links in the middle column */
+    gap: 15px;
+}
 
