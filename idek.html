@@ -1,69 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-<head>
-    <title>Miami Mkt Bodega Home Page</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-
-</head>
-
-<body>
-
-<nav class="navbar_body">
-    <span class="navbar_logo"> Miami MKT</span>
-
-    <div class="navbar_redirects">
-        <span> Home</span>
-        <span>Explore</span>
-        <span>About</span>
-        <span>Support</span>
-    </div>
-
-</nav>
-
-
-</body>
 
 
 
 
-</html>
+
+
+/* Removes any default margin*/
+*{
+    margin: 0;
+    padding: 0;
+}
 
 
 
+/*always best to do the min height to any starting project, also for background-image
+ the value must be in double quotes */
 
 body{
-margin:0;
+    min-height: 100vh;
+    background-image: url("/static/IMG/background_image.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
-
-
-
-
-
-.navbar_body{
+/* something to note: we didnt give the navbar a height as we want the children to set the height*/
+.navbarBody{
+    background-color: white;
     display: grid;
-  grid-template-columns: auto 1fr;   /* logo | links  (add another 'auto' later for icons) */
-  align-items: center;               /* vertical centering */
-  height: 3rem;
-  background: #000;
-  color: #fff;
-  padding: 0 12px;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "logo nav menu";
+    /*
+    allows the logo to be on the row as li's however does cause them to be off centered,, this was before we mad eit to be a
+    3 section row before it was auto 1fr.
+
+    */
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px rgba(0,0,0,0.1) /* will give navbar some depth */
+
 }
+
+
+.navbarBody ul{
+
+    width: 100%; /* to make it spam ful width of container being the navbar*/
+    list-style: none; /* removes bullet points*/
+    display:flex;
+    justify-content: center; /* centers li un ul to be centered in navbar = */
+    align-items: center;
+
+}
+
+.navbarBody li{
+    height: 50px;
+}
+
+.navbarBody a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    color: black;
+}
+
+
+.navbarBody a:hover{
+    background-color: #f0f0f0;
+}
+
 
 
 .navbar_logo{
-    grid-column: 1;
-    font-weight: 600;
-}
-
-
-.navbar_redirects{
-    grid-column: 2;
+    grid-area: logo;
     display: flex;
-    justify-content: center;           /* center links in the middle column */
-    gap: 15px;
+    align-items: center;
+    padding-left: 2rem;
+
 }
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miami Mkt Bodega Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+
+
+    <nav class="navbarBody">
+        <span class="navbar_logo" >Miami MKT</span>
+
+        <ul class="sidebar">
+            <li> <a> Home</a></li>
+            <li> <a> Locations</a></li>
+            <li> <a> About</a></li>
+            <li> <a> Support</a></li>
+        </ul>
+        <ul>
+            <li> <a> Home</a></li>
+            <li> <a> Locations</a></li>
+            <li> <a> About</a></li>
+            <li> <a> Support</a></li>
+
+        </ul>
+        <a><svg class="navbarMenu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+    </nav>
+
+
+
+</body>
+</html>
+/*
+for the sidebar, since we want it to be only on the right side and not influence other elements
+*/
+
+.sidebar{
+    grid-area: menu;
+    position: fixed;
+    top:0;
+    right:0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+
+}
+
+
+
+
+
+.sidebar a{
+    width:100%
+}
