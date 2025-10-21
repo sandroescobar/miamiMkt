@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Miami Mkt Bodega About Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+
+  <body id="about_body">
+    {% include 'navbar.html' %}
+
+    <!-- Two-column grid: left = copy, right = slideshow -->
+    <section class="about_section">
+      <!-- LEFT COLUMN -->
+      <div class="about_header">
+        <h1>About Us</h1>
+
+        <div class="slideshow-container" style="margin-top:8px;">
+  <div style="padding:16px 18px;">
+    <p class="about_us_p">
+      <strong>Our Story: </strong> From Convenience to Coastal Cool
+We've all been there: rushing into the local convenience store for a quick snack, a bottle of water, or a forgotten essential. But let's be honest—the experience is often anything but convenient. Cluttered aisles, questionable smells, and a general lack of inspiration have defined the corner bodega and convenience store for too long.
+    </p>
+
+    <p class="about_us_p">
+     We saw a need to not just stock the shelves differently, but to completely reimagine the space. Why should a quick stop feel like a chore instead of a momentary retreat?
+    </p>
+
+    <p class="about_us_p">
+     <strong>The Concept: Upgrading Your Everyday Grab-and-Go </strong>
+<strong>Our mission is simple: </strong> to transform the everyday grab-and-go experience into something genuinely enjoyable. We're taking the essentials you need and presenting them in a space that’s nice, clean, and inspiring.
+    </p>
+    <p class="about_us_p">
+  <strong>The Affordable Wine Collection:</strong> Hand-picked Old World bottles—from Italy, Spain, Southern France, Chile, and Argentina—priced so you can explore great wine without overspending.
+  <br><br>
+  <strong>Our Vision:</strong> Fresh, organized stores that bring a touch of coastal Miami to the neighborhood. More than a convenience store—it's everyday essentials with a little luxury. The bodega, perfected.
+</p>
+
+  </div>
+</div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="about_right">
+      <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="{{ url_for('static', filename='images/poto_from_side_entrance.jpg') }}" style="width:100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="{{ url_for('static', filename='images/snack_section.jpg') }}" style="width:100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="{{ url_for('static', filename='images/logo_on_top_apt_entrance.jpg') }}" style="width:100%" />
+        </div>
+
+        <!-- Nav arrows (overlay on slides) -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <!-- Values live at the bottom of the slideshow card -->
+        <div class="about_values">
+          <div class="val_item">
+            <h3>Local Roots</h3>
+            <p>We partner with Miami vendors and small makers to bring real neighborhood flavor.</p>
+          </div>
+          <div class="val_item">
+            <h3>People First</h3>
+            <p>Every customer is family — we’re here for late-night cravings and daily essentials.</p>
+          </div>
+          <div class="val_item">
+            <h3>Convenience, Redefined</h3>
+            <p>Order for pickup or delivery — groceries, snacks, beer, coffee, all in one place.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DoorDash delivery card: placed inside .about_section so grid-column:2 aligns under right column -->
+      <div class="dd-card slideshow-container">
+        <div class="delivery_section" style="padding:16px 18px;">
+          <h3 style="color:#fff; margin-bottom:8px;">Delivery on DoorDash</h3>
+          <p style="color:#ddd; margin-bottom:8px; line-height:1.55;">
+            All Miami MKT locations — and our sister smoke shops where available — are on DoorDash.
+            Get groceries, snacks, cold drinks, <strong>beer &amp; wine</strong>, and select
+            <strong>nicotine vapes</strong> delivered fast.
+          </p>
+          <ul style="color:#ddd; margin:8px 0 0 18px; line-height:1.6;">
+            <li>Fast local delivery from your nearest store</li>
+            <li>Real-time tracking in the DoorDash app</li>
+            <li>21+ ID check for alcohol &amp; nicotine items</li>
+          </ul>
+          <div style="margin-top:12px;">
+            <a href="/locations"
+               style="display:inline-block; padding:12px 16px; border-radius:10px; background:#FFC06A; color:#111; font-weight:700; text-decoration:none;">
+              Find your store on DoorDash
+            </a>
+          </div>
+          <p style="color:#aaa; font-size:12px; margin-top:8px;">
+            Availability varies by location. Alcohol &amp; nicotine delivery subject to local laws and ID verification.
+          </p>
+        </div>
+      </div>
+
+      </div>
+
+    </section>
+
+    <!-- Dots for slideshow -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </body>
+</html>

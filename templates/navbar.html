@@ -1,0 +1,87 @@
+<nav class="navbarBody">
+        <div class="socialsNav">
+            
+            <!--<a href="https://www.instagram.com/miamibodega/?hl=en"> <img class="navbar_logo" height="25" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/> </a> -->
+            <a class="brand" href="/">
+                <img class="navbar_logo" src="{{ url_for('static', filename='images/miami_mkt_updated-Kittl.svg') }}"
+                alt="MIAMI MKT Bodega & Café" />
+            </a>
+
+
+
+        </div>
+       
+        
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <div class="dropdown">
+
+                <button class="dropbtn">
+                    Locations
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <h5 class="firstHeaderDropdownMenu">Our Markets/Bodegas</h5>
+                    <hr>
+                    <a href="https://www.google.com/maps/search/?api=1&query=214+NW+8th+St+Miami+FL" target="_blank" rel="noopener">
+                        Miami Mkt Bodega — Downtown
+                            <small>214 NW 8th St, Miami, FL • Directions ↗</small>
+                    </a>
+
+                    <h5>Sister smoke shops</h5>
+                    <hr>
+                    <a href="https://www.google.com/maps/search/?api=1&query=6346+SW+8th+St+Miami+FL" target="_blank" rel="noopener">
+                        Miami Vape & Smoke — Flagler
+                        <small>6346 SW 8th St • Directions ↗</small>
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=345+NE+79th+St+Miami+FL" target="_blank" rel="noopener">
+                        Miami Vape & Smoke — 79th
+                        <small>345 NE 79th St • Directions ↗</small>
+                    </a>
+
+                    <h5>Opening soon</h5>
+                    <hr>
+                    <a class="disabled" href="#">
+                        Wynwood
+                        <small>ETA Summer 2025</small>
+                    </a>
+                </div>
+
+            </div>
+            
+            <li> <a href="{{url_for('about')}}"> About</a></li>
+            <li> <a href="{{url_for('support')}}"> Support</a></li>
+
+        </ul>
+        <span class="navbarButtonHolder">
+            <svg onclick="openNav()" class="navbarButton" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </span>
+        
+    </nav>
+
+    
+
+    <div id = "mySidenav" class="sidenav">
+            <img class="closebtn" height="25" src="https://img.icons8.com/ios/50/close-window--v1.png" alt="close-window--v1" onclick="closeNav()"/>
+            <a href="/" onclick="closeNav()">Home</a>
+            
+            <!-- Locations dropdown for mobile -->
+            <a href="#" id="sidenavLocations" onclick="event.preventDefault(); toggleSidenavLocations()">Locations</a>
+            <div id="sidenavLocationsMenu" class="sidenav-dropdown" style="display:none;">
+              <a href="https://www.google.com/maps/search/?api=1&query=214+NW+8th+St+Miami+FL" target="_blank" onclick="closeNav()">
+                Downtown • 214 NW 8th St
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=6346+SW+8th+St+Miami+FL" target="_blank" onclick="closeNav()">
+                Flagler • 6346 SW 8th St
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=345+NE+79th+St+Miami+FL" target="_blank" onclick="closeNav()">
+                79th St • 345 NE 79th St
+              </a>
+              <a href="#" style="opacity:0.6; pointer-events:none;">
+                Wynwood (Coming Soon)
+              </a>
+            </div>
+            
+            <a href="/about" onclick="closeNav()">About</a>
+            <a href="/support" onclick="closeNav()">Support</a>
+    </div>
