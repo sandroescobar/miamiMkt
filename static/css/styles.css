@@ -16,11 +16,17 @@
 
 body{
     min-height: 100vh;
-    background-image: url("../images/background_image.webp");
+    background-image: url("../images/miami_mkt_background_image.webp");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 
+}
+
+@supports not (background-image: url("data:image/webp;base64,UklGRjIAAABXRUJQ")) {
+    body {
+        background-image: url("../images/miami_mkt_background_image.png");
+    }
 }
 
 @supports not (background-image: url("data:image/webp;base64,UklGRjIAAABXRUJQ")) {
