@@ -398,10 +398,17 @@ body{
 
 .categoryRow > span{ color: black; }
 
+@media (max-width: 1700px) and (min-width: 1400px) {
+    .navbar_logo {
+        height: 50px;
+    }
+
+  }
+
 
 @media (max-width: 1400px) and (min-width: 1200px) {
     .navbar_logo {
-        height: 40px;
+        height: 45px;
     }
 
   }
