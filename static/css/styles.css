@@ -19,13 +19,19 @@ body{
     min-height: 100vh;
 }
 
-
+/* Mobile-first default */
 #index_body{
-    background-image: url("../images/updated_mkt_homepage.png");
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    background-position: right 0;
-} 
+  background-image: url("../images/updated_mkt_homepage.png");
+  background-repeat: no-repeat;
+  background-size: 90% 100%;
+  background-position: right 0;
+  transition: background-size .25s ease, background-position .25s ease;
+}
+
+/* Tablet & up */
+
+
+
 
 
 
@@ -624,8 +630,8 @@ for the sidebar, since we want it to be only on the right side and not influence
   z-index: 4;               /* above slide images, below nav arrows */
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
-#about_body .about_values h3{
-  color: #000k;
+#about_body .about_values p{
+  color: #000;
   font-size: 15px;
   line-height: 1.5;
 }
