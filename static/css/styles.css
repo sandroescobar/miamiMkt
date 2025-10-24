@@ -397,3 +397,11 @@ body{
 @media (max-width: 900px){ .about_right { align-items: stretch; } }
 
 .categoryRow > span{ color: black; }
+
+
+@media (max-width: 1350px) and (min-width: 1200px) {
+    .navbar_logo {
+        height: 40px;
+    }
+
+  }
