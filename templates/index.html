@@ -8,23 +8,31 @@
     <link rel="preload" as="image" href="{{ url_for('static', filename='images/background_image.webp') }}" type="image/webp">
     <link rel="preload" as="image" href="{{ url_for('static', filename='images/background_image.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body id = "index_body">
 
 
     {% include 'navbar.html' %}
 
     <div class="headerBody">
+        <a class="homePageLogo" href="/">
+            <img class="homepage_slogo" src="{{ url_for('static', filename='images/homepage_slogo.webp') }}"
+            alt="MIAMI MKT Bodega & Café" />
+        </a>
+        <div class="categoryRow">
+            <span class="categoryItem">Fresh Food</span>
+            <span class="categoryItem">Snacks</span>
+            <span class="categoryItem">Exotic Snacks</span>
+            <span class="categoryItem">Wines</span>
+            <span class="categoryItem">Beers</span>
+            <span class="categoryItem">Home Goods</span>
+            <span class="categoryItem">Vapes</span>
+            <span class="categoryItem">And More</span>
+        </div>
         <div class="innerHeadings">
-                <span > Miami Mkt Bodega <br>
-            Bodega <br> Coffee <br> Wine & Beer <br> And More...
-        
-        </span>
-
-    </div>
-        
-
+        </div>
     </div>
 
     
