@@ -223,7 +223,7 @@ body{
 /* Phones */
 @media (max-width: 767.98px) {
   #index_body{
-    background-image: url("../images/updated_mkt_homepage.png");
+    background-image: url("../images/final_background.png");
     background-size: cover;
     background-position: center center;
   }
@@ -249,7 +249,7 @@ body{
 /* Tablets & small desktops (center content + full-bleed bg) */
 @media (max-width: 1199.98px) and (min-width: 768px){
   #index_body{
-    background-image: url("../images/updated_mkt_homepage.png");
+    background-image: url("../images/final_background.png");
     background-size: cover;
     background-position: center center;
   }
