@@ -15,7 +15,7 @@ body{
 /* ---- HOME / INDEX ---- */
 /* Mobile-first default: image fills the viewport */
 #index_body{
-  background-image: url("../images/updated_mkt_homepage.png");
+  background-image: url("../images/final_background.png");
   background-repeat: no-repeat;
   background-size: cover;            /* full-bleed on mobile & tablets */
   background-position: center center;
