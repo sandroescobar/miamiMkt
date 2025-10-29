@@ -48,7 +48,7 @@ body{
     position: relative;
     z-index: 10;
     font-size: 16px;
-    font-family: Rubik Mono One, sans-serif;
+    font-family: sans-serif;
     background-color: transparent;
 }
 .navbarMenu{ color: black; }
@@ -281,7 +281,7 @@ body{
 .dropdown { float: left; overflow: hidden; position: relative; overflow: visible; }
 .dropdown .dropbtn { 
   border: none; outline: none; padding: 0 30px; background-color: transparent;
-  color: black; margin: 0; font-size: 16px; font-family: Rubik Mono One, sans-serif; cursor: pointer;
+  color: black; margin: 0; font-size: 16px; font-family: sans-serif; cursor: pointer;
   transition: text-decoration 0.3s ease;
 }
 .dropdown .dropbtn:hover { text-decoration: underline; text-decoration-color: #2EC2E4; }
@@ -296,7 +296,7 @@ body{
   color: #fff; font-family: inherit; font-size: 13px; padding: 10px 12px 10px;
 }
 .firstHeaderDropdownMenu{ padding-top: 12px; padding-bottom: 8px; }
-.dropdown-content h5{ color: #fff; text-align: center; font-size: 14px; font-family: inherit; }
+.dropdown-content h5{ color: #fff; text-align: center; font-size: 14px; font-family: sans-serif; }
 .dropdown-content a:hover{ background: rgba(255,192,106,.14); color: #fff; }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown-content a small { display:block; font-size:12px; opacity:.85; }
@@ -409,6 +409,9 @@ body{
 @media (max-width: 1400px) and (min-width: 1200px) {
     .navbar_logo {
         height: 45px;
+    }
+    .categoryRow{
+        margin-top: 4%;
     }
 
   }
