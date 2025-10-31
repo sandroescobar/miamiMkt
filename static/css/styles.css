@@ -306,13 +306,13 @@ body{
 }
 
 /* ---- ABOUT / SUPPORT ---- */
-#about_body{ background-image: url("../images/about_light.png"); }
+#about_body{ background-image: url("../images/final_about_support_background.png"); }
 @supports not (background-image: url("data:image/webp;base64,UklGRjIAAABXRUJQ")) {
-    #about_body { background-image: url("../images/about_light.png"); }
+    #about_body { background-image: url("../images/final_about_support_background.png"); }
 }
 .about_header{
     display: flex; flex-direction: column; align-items: flex-start;
-    padding: 16px 18px; background: rgba(255,255,255,0.94);
+    padding: 16px 18px; background: #EF85C2;
     border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.12);
     position: relative; z-index: 2;
 }
@@ -328,7 +328,8 @@ body{
   max-width: 700px; width: 100%; position: relative; display: block;
   right: auto; bottom: auto; border-radius: 14px;
   box-shadow: 0 14px 40px rgba(0,0,0,.35); border: 1px solid rgba(255,255,255,.08);
-  overflow: hidden; justify-self: end; 
+  overflow: hidden; justify-self: end;
+  background: white;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -348,9 +349,9 @@ body{
 @keyframes fade { from {opacity: .4} to {opacity: 1} }
 @media only screen and (max-width: 300px) { .prev, .next, .text {font-size: 11px} }
 
-#support_body{ background-image: url("../images/about_light.png"); }
+#support_body{ background-image: url("../images/final_about_support_background.png"); }
 @supports not (background-image: url("data:image/webp;base64,UklGRjIAAABXRUJQ")) {
-    #support_body { background-image: url("../images/about_light.png"); }
+    #support_body { background-image: url("../images/final_about_support_background.png"); }
 }
 
 .about_section{
