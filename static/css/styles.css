@@ -306,9 +306,9 @@ body{
 }
 
 /* ---- ABOUT / SUPPORT ---- */
-#about_body{ background-image: url("../images/final_about_support_background.png"); }
+#about_body{ background-image: url("../images/finaL_about_support_background.png"); }
 @supports not (background-image: url("data:image/webp;base64,UklGRjIAAABXRUJQ")) {
-    #about_body { background-image: url("../images/final_about_support_background.png"); }
+    #about_body { background-image: url("../images/finaL_about_support_background.png"); }
 }
 .about_header{
     display: flex; flex-direction: column; align-items: flex-start;
@@ -349,9 +349,9 @@ body{
 @keyframes fade { from {opacity: .4} to {opacity: 1} }
 @media only screen and (max-width: 300px) { .prev, .next, .text {font-size: 11px} }
 
-#support_body{ background-image: url("../images/final_about_support_background.png"); }
+#support_body{ background-image: url("../images/finaL_about_support_background.png"); }
 @supports not (background-image: url("data:image/webp;base64,UklGRjIAAABXRUJQ")) {
-    #support_body { background-image: url("../images/final_about_support_background.png"); }
+    #support_body { background-image: url("../images/finaL_about_support_background.png"); }
 }
 
 .about_section{
